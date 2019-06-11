@@ -53,15 +53,16 @@ navItems[2].textContent = 'Vision';
 navItems[3].textContent = 'Features';
 navItems[4].textContent = 'About';
 navItems[5].textContent = 'Contact';
-// navItems.style.color = 'dodgerblue';
+let navItemOne = document.querySelector('nav a');
+navItemOne.style.color = 'dodgerblue';
 const newPrependContent = document.createElement('a');
-newContent.textContent = 'Social Media';
+newPrependContent.textContent = 'list';
+const nav = document.querySelector('nav');
 
+nav.appendChild(newPrependContent);
 const newAppendContent = document.createElement('a');
-newContent.textContent = 'Github';
-//doesn't like it VV
-// navItems.prepend(newPrependContent);
-//navItems.append(newAppendContent);
+newAppendContent.textContent = 'Github';
+nav.prepend(newAppendContent);
 
 let ctaImg = document.getElementById('cta-img');
 ctaImg.setAttribute('src', siteContent['cta']['img-src']);
